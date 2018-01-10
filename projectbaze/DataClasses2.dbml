@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="magazin" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=magazin;Integrated Security=True" SettingsObjectName="projectbaze.Properties.Settings" SettingsPropertyName="magazinConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Categorie" Member="Categories">
+    <Type Name="Categorie">
+      <Column Name="ID_categorie" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Categorie_Produse" Member="Produses" ThisKey="ID_categorie" OtherKey="Categorie_id" Type="Produse" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comenzi3" Member="comenzi3s">
+    <Type Name="comenzi3">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="suma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id2" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Useri" Member="Useris">
+    <Type Name="Useri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Parola" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="adresa" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Administrator" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Useri_comenzi2" Member="comenzi2s" ThisKey="ID" OtherKey="user_id" Type="comenzi2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shippers" Member="Shippers">
+    <Type Name="Shipper">
+      <Column Name="ID_shipper" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Shipper_comenzi2" Member="comenzi2s" ThisKey="ID_shipper" OtherKey="shipper_id" Type="comenzi2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PTcos" Member="PTcos">
+    <Type Name="PTco">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Pret" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cantitta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PTco_comenzi2" Member="comenzi2s" ThisKey="id" OtherKey="id" Type="comenzi2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produse" Member="Produses">
+    <Type Name="Produse">
+      <Column Name="Id_produs" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Pret" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descriere" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cantitate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Categorie_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Categorie_Produse" Member="Categorie" ThisKey="Categorie_id" OtherKey="ID_categorie" Type="Categorie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shippers" Member="Shipper1s">
+    <Type Name="Shipper1">
+      <Column Name="ID_shipper" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Shipper1_comenzi2" Member="comenzi2s" ThisKey="ID_shipper" OtherKey="shipper_id" Type="comenzi2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comenzi2" Member="comenzi2s">
+    <Type Name="comenzi2">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="suma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PTco_comenzi2" Member="PTco" ThisKey="id" OtherKey="id" Type="PTco" IsForeignKey="true" />
+      <Association Name="Shipper_comenzi2" Member="Shipper" ThisKey="shipper_id" OtherKey="ID_shipper" Type="Shipper" IsForeignKey="true" />
+      <Association Name="Shipper1_comenzi2" Member="Shipper1" ThisKey="shipper_id" OtherKey="ID_shipper" Type="Shipper1" IsForeignKey="true" />
+      <Association Name="Useri_comenzi2" Member="Useri" ThisKey="user_id" OtherKey="ID" Type="Useri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.inserare" Method="inserare">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="shipperid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="suma" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UPDATESHIPPER" Method="UPDATESHIPPER">
+    <Parameter Name="shipperid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UPDATEsum" Method="UPDATEsum">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="shipperid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="suma" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
