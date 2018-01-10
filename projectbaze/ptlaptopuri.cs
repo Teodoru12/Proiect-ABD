@@ -135,6 +135,8 @@ namespace projectbaze
                 context.PTcos.InsertOnSubmit(employee);
                 context.SubmitChanges();
                 frm1.BLA();
+                a.Cantitate = a.Cantitate - 1;
+                context.SubmitChanges();
                 //frm1.addingrid(a.Nume.ToString(), a.Pret.ToString(), "1");
                 //frm1.Show();
 

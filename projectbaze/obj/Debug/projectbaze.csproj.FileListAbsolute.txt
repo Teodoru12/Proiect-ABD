@@ -51,3 +51,17 @@ C:\Users\Teodor\Desktop\proiectul\projectbaze\bin\Debug\itextsharp.dll
 C:\Users\Teodor\Desktop\proiectul\projectbaze\bin\Debug\itextsharp.pdfa.dll
 C:\Users\Teodor\Desktop\proiectul\projectbaze\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\Teodor\Desktop\proiectul\projectbaze\bin\Debug\itextsharp.xtra.dll
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\bin\Debug\projectbaze.exe.config
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.exe
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.pdb
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.csprojResolveAssemblyReference.cache
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.admin.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.final.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.Form1.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.Form2.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.Inregistrare.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.Main.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.Properties.Resources.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.ptlaptopuri.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.pttablete.resources
+C:\Users\alex\Desktop\teo\Proiect-ABD\projectbaze\obj\Debug\projectbaze.csproj.GenerateResource.Cache
