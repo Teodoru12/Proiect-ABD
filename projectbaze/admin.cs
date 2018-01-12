@@ -216,5 +216,10 @@ namespace projectbaze
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

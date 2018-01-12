@@ -136,5 +136,53 @@ namespace projectbaze
             }
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var context = new DataClasses2DataContext();
+            foreach (DataGridViewRow row in dataGridView3.SelectedRows)
+            {
+                int v = Convert.ToInt32(row.Cells[0].Value.ToString());
+                dataGridView3.Rows.RemoveAt(row.Index);
+                var deleteorder = from detail in context.PTcos
+                                  where detail.id == v
+                                  select detail;
+                foreach (var detail in deleteorder)
+                {
+                    context.PTcos.DeleteOnSubmit(detail);
+                    context.SubmitChanges();
+                }
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var context = new DataClasses2DataContext();
+            final ss = new final();
+            ss.Show();
+            var result23 = (from t in context.comenzi3s
+                            where t.id > 0
+                            select t).First();
+            System.Nullable<int> totalUnitsOnOrder = (from ord in context.PTcos
+                                                      select ord.Pret).Sum();
+            result23.suma = totalUnitsOnOrder;
+            context.SubmitChanges();
+
+            //var deleteorder = from detail in context.PTcos
+
+            //                  select detail;
+            //foreach (var detail in deleteorder)
+            //{
+            //    context.PTcos.DeleteOnSubmit(detail);
+            //    context.SubmitChanges();
+            //}
+            //for (int n=0;n<dataGridView3.Rows.Count;n++)
+            //dataGridView3.Rows.RemoveAt(n);
+        }
     }
 }
