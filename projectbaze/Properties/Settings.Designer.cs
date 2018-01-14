@@ -26,8 +26,17 @@ namespace projectbaze.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7H7NE9T\\ALEX;Initial Catalog=magazin;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=magazin;Integrated Security=True")]
+        public string magazinConnectionString1 {
+            get {
+                return ((string)(this["magazinConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=magazin;Integrated Security=True")]
         public string magazinConnectionString {
             get {
                 return ((string)(this["magazinConnectionString"]));
@@ -37,10 +46,11 @@ namespace projectbaze.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=magazin;Integrated Security=True")]
-        public string magazinConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7H7NE9T\\ALEX;Initial Catalog=magazin;Integrated Security=True" +
+            "")]
+        public string magazinConnectionString2 {
             get {
-                return ((string)(this["magazinConnectionString1"]));
+                return ((string)(this["magazinConnectionString2"]));
             }
         }
     }

@@ -176,6 +176,8 @@ namespace projectbaze
 
                                 context3.inserare(rnd.Next(50000), al.ID, 1, 1);
                                 context3.SubmitChanges();
+                                context3.UPDATEPRICEQ();
+                                context3.SubmitChanges();
 
                             }
                             //    };

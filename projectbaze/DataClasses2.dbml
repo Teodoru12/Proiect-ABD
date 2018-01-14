@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="magazin" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=magazin;Integrated Security=True" SettingsObjectName="projectbaze.Properties.Settings" SettingsPropertyName="magazinConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-7H7NE9T\ALEX;Initial Catalog=magazin;Integrated Security=True" SettingsObjectName="projectbaze.Properties.Settings" SettingsPropertyName="magazinConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Categorie" Member="Categories">
     <Type Name="Categorie">
       <Column Name="ID_categorie" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -92,6 +92,9 @@
     <Parameter Name="userid" Type="System.Int32" DbType="Int" />
     <Parameter Name="shipperid" Type="System.Int32" DbType="Int" />
     <Parameter Name="suma" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UPDATEPRICEQ" Method="UPDATEPRICEQ">
     <Return Type="System.Int32" />
   </Function>
 </Database>

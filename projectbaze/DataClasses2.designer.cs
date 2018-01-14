@@ -54,7 +54,7 @@ namespace projectbaze
     #endregion
 		
 		public DataClasses2DataContext() : 
-				base(global::projectbaze.Properties.Settings.Default.magazinConnectionString1, mappingSource)
+				base(global::projectbaze.Properties.Settings.Default.magazinConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -165,6 +165,13 @@ namespace projectbaze
 		public int UPDATEsum([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userid, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> shipperid, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> suma)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, userid, shipperid, suma);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UPDATEPRICEQ")]
+		public int UPDATEPRICEQ()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((int)(result.ReturnValue));
 		}
 	}
